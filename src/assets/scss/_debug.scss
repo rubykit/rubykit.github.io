@@ -1,0 +1,25 @@
+body.debug {
+
+  &::before {
+    position:   fixed;
+    top:        0;
+    left:       0;
+    z-index:    9999999;
+    content:    "xs";
+    background: #000;
+    color:      #fff;
+  }
+
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    body.debug {
+      &::before {
+        content: "#{$infix}";
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+$gradients: (
+  "kit-auth":          [#c2eb00, #677a08],
+  "kit-geolocation":   [#c4e0e5, #3d808b],
+  "kit-payment":       [#ebd147, #b59325],
+
+  "kit-organizer":     [#4b6cb7, #182848],
+  "kit-contract":      [#65c7f7, #0052d4],
+  "kit-error":         [#d98324, #a40606],
+  "kit-doc-yard":      [#dbd5a4, #649173],
+
+  "kit-router":        [#eacda3, #927249],
+  "kit-domain":        [#ffdb34, #f7971e],
+  "kit-appcontainer":  [#D783BE, #5c2a4f],
+  "kit-jsonapi":       [#f88d80, #ec250d],
+  "kit-admin":         [#e0455f, #44000b],
+  "kit-config":        [#928dab, #1f1c2c],
+  "kit-pagination":    [#d2ccc4, #2f4353],
+  "kit-store":         [#00e7c1, #027a7e],
+);
+
+@each $name, $glist in $gradients {
+  .text-framework-component-#{$name}-color-light {
+    color: list.nth($glist, 1) !important;
+  }
+
+  .text-framework-component-#{$name}-color-dark {
+    color: list.nth($glist, -1) !important;
+  }
+}
