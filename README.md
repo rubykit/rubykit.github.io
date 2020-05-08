@@ -25,8 +25,9 @@ You should now be able to use Gulp. Have a look at `gulpfile.js` to see what's a
 
 ## Deploy
 
-To compile and deploy, checkout `master` and run:
-```shell
+Since this is hosted on Github Pages with an Org repository, the branch containing the compiled assets needs to be `master`, so the protected source branch is `src`.
+
+To compile and deploy, checkout `src` and run:
+```
 gulp deploy
 ```
-
