@@ -1,0 +1,29 @@
+{
+  "name": "rubykit-static-website",
+  "version": "0.1.0",
+  "description": "Static website at https://rubykit.org",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-slim": "^0.3.0"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubykit/rubykit.github.io"
+  },
+  "author": "nathan@rubykit.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rubykit/rubykit.github.io/issues"
+  },
+  "homepage": "https://rubykit.org"
+}
