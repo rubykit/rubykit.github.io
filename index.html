@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RubyKit Framework</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="Kit is a Ruby web-framework that helps you build growth-ready applications fast, using powerful patterns." name="description" />
+    <meta content="summary" name="twitter:card" />
+    <meta content="@rubykit_framework" name="twitter:site" />
+    <meta content="RubyKit Framework" name="twitter:title" />
+    <meta content="Kit is a Ruby web-framework that helps you build growth-ready applications fast, using powerful patterns." name="twitter:description" />
+    <meta content="https://rubykit.org/assets/images/rubykit-framework-logo.svg" name="twitter:image" />
+    <meta content="RubyKit Framework" property="og:title" />
+    <meta content="website" property="og:type" />
+    <meta content="https://rubykit.org" property="og:url" />
+    <meta content="https://rubykit.org/assets/images/rubykit-framework-logo.svg" property="og:image" />
+    <meta content="Kit is a Ruby web-framework that helps you build growth-ready applications fast, using powerful patterns." property="og:description" />
+    <meta content="RubyKit Framework" property="og:site_name" />
+    <link href="/assets/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/assets/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/assets/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/assets/favicon/site.webmanifest" rel="manifest" />
+    <link href="/assets/favicon/safari-pinned-tab.svg" rel="mask-icon" />
+    <link href="assets/css/application.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-dark">
+      <div class="container-lg">
+        <nav class="navbar navbar-dark navbar-expand-sm px-0">
+          <a class="navbar-brand text-monospace mr-auto" href="/"><img class="d-inline-block align-top" src="assets/images/rubykit-framework-logo.svg" /><span class="text-primary font-weight-bold ml-2 pl-1"><span>r</span><span style="letter-spacing: 3px;">u</span><span style="letter-spacing: 3px;">b</span><span style="letter-spacing: 3px;">y</span><span>k</span><span style="letter-spacing: 0px;">i</span><span>t</span></span><span class="text-muted ml-1 font-weight-light"><span style="letter-spacing: 0px;">f</span><span style="letter-spacing: 0px;">r</span><span>a</span><span>m</span><span>e</span><span>w</span><span style="letter-spacing: 0;">o</span><span style="letter-spacing: 1px;">r</span><span>k</span></span></a><button aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navBar" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navBar">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="https://docs.rubykit.org/edge/file.overview.html" target="_blank">Guides</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="https://docs.rubykit.org/" target="_blank">Docs</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="https://github.com/rubykit/kit" target="_blank">Source</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="content">
+      <section>
+        <div class="container-lg">
+          <div class="row my-5">
+            <div class="col-12 py-5 text-center">
+              <h1 class="font-weight-normal pb-1">
+                <span class="text-primary text-monospace font-weight-bold" style="font-size: 2.7rem; margin-right: -0.85rem;">Kit </span>is an <span class="font-weight-bold">all inclusive</span><i>🍹 </i>web framework.
+              </h1>
+              <div class="h4 font-weight-normal">
+                Build growth-ready applications fast, using powerful patterns.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-dark py-5" id="manifesto">
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="font-weight-normal mb-0">
+                “Oh no, why yet another framework?” <i>🤨</i>
+              </h2>
+              <div class="h4 text-monospace font-weight-normal mt-4 mb-0">
+                A manifesto.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-lg mt-2">
+          <div class="row">
+            <div class="col-12 text-justify">
+              <ol class="pl-0">
+                <li id="manifesto-ruby-rails">
+                  <h3 class="h5 pb-2">
+                    We like Rails, but it does not teach you how to write extensible code<a class="hover-link" href="#manifesto-ruby-rails"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                  </h3>
+                  <p class="text-muted">
+                    <a href="https://rubyonrails.org/" target="_blank">Rails</a> has many interesting aspects, but after you hit a controller, you're on your own. How are you supposed to organize your code?
+                  </p>
+                  <p class="text-muted">
+                    <a href="https://guides.rubyonrails.org/engines.html" target="_blank">Engines </a>are a great step, but how do you actually write an extensible one?
+                  </p>
+                  <p class="text-muted">
+                    We think that many of the abstractions provided fall short, or are missing entirely. Sure, you can always make it work with any technology, but it is time-consuming.
+                  </p>
+                  <p class="text-muted">
+                    So <span class="text-framework-component text-primary">Kit</span> is built on top of Rails, and when we can leverage what it already does, we gladly do. We use Engines, Railties, and ActiveRecord explicitly, but the rest is hidden behind connectors. If you are already on Rails, what we provide is fully opt-in, but you'll find that the reasons to interact with Rails disappear rapidly.
+                  </p>
+                  <p class="text-muted">
+                    The real question that led to <span class="text-framework-component text-primary">Kit</span> is: how do I write extensible code?
+                  </p>
+                </li>
+                <li id="manifesto-domains">
+                  <h3 class="h5 pb-2">
+                    Domains<a class="hover-link" href="#manifesto-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                  </h3>
+                  <p class="text-muted">
+                    <a href="https://martinfowler.com/bliki/DomainDrivenDesign.html" target="_blank">Domain Driven Design </a>and particularly <a href="https://martinfowler.com/bliki/BoundedContext.html" target="_blank">Bounded Contexts </a>help a great deal to design your applications, reason about dependencies and write reusable code.
+                  </p>
+                  <p class="text-muted">
+                    <span class="text-framework-component text-primary">Kit</span> includes several ready to use domains. In our case, they are fully-fledged apps that contain: the business logic for a specific part of the system, a ready to use JSON:API app, a user-facing web-app, and user-facing admin web-app.
+                  </p>
+                  <p class="text-muted">
+                    These domains can be deployed as standalone apps or included as libraries in other domains.
+                  </p>
+                  <p class="text-muted">
+                    <a class="text-framework-component text-framework-component-kit-domain-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-domain" target="blank">Kit::Domain</a> is here to help you build your own domains.
+                  </p>
+                </li>
+                <li id="manifesto-functional-programming">
+                  <h3 class="h5 pb-2">
+                    Functional programming<a class="hover-link" href="#manifesto-functional-programming"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                  </h3>
+                  <p class="text-muted">
+                    We think one of the reasons Rails is not particularly extensible is that it relies heavily on mixins & inheritance. So if you want to reuse a single utility method, you have to buy into a hierarchy of objects that you need to compose with and instantiate in a specific way.
+                  </p>
+                  <p class="text-muted">
+                    This leads to code where the contracts are difficult to understand, and that is not easy to unit test.
+                  </p>
+                  <p class="text-muted">
+                    We try to avoid some shortfalls of OOP, and separate the code from the data. This helps a great deal when reasoning about mutability and what you are actually trying to accomplish.
+                  </p>
+                  <p class="text-muted">
+                    We mostly use Modules with Class methods that you can call from anywhere.
+                  </p>
+                </li>
+                <li id="manifesto-railway-oriented-programming">
+                  <h3 class="h5 pb-2">
+                    Railway oriented programming<a class="hover-link" href="#manifesto-railway-oriented-programming"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                  </h3>
+                  <p class="text-muted">
+                    This lends itself very well to <a href="https://fsharpforfunandprofit.com/rop/" target="_blank">Railway oriented programming</a>.
+                  </p>
+                  <p class="text-muted">
+                    <a class="text-framework-component text-framework-component-kit-organizer-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-organizer" target="blank">Kit::Organizer</a> helps you to write and chain code to compose any task. Think of it as a pipe operator.
+                  </p>
+                </li>
+                <li id="manifesto-contracts">
+                  <h3 class="h5 pb-2">
+                    Contracts<a class="hover-link" href="#manifesto-contracts"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                  </h3>
+                  <p class="text-muted">
+                    Static typing is a powerful tool that will be part of Ruby 3.
+                  </p>
+                  <p class="text-muted">
+                    But as a programmer, what you actually want to do is enforce constraints like "this should be a positive int, lower than 10" or "this should be an array where the second index is a string with value X".
+                  </p>
+                  <p class="text-muted">
+                    In these situations, static typing falls short, because we need <a href="https://en.wikipedia.org/wiki/Dependent_type" target="_blank">dependent types</a> (types that also include values). They often can not be solved at compile / transpile time, because the values are not known yet.
+                  </p>
+                  <p class="text-muted">
+                    As a result, you end up having to use several data validation primitives: one in the language for types, and one in your codebase for actual values (think: validating form data, checking that a function parameter as a specific value, etc.).
+                  </p>
+                  <p class="text-muted">
+                    We believe that there should only be one, opt-in, validation primitive.
+                  </p>
+                  <p class="text-muted">
+                    We take inspiration from <a href="" target="_blank">design by contract</a>, and that is what <a class="text-framework-component text-framework-component-kit-contract-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-organizer" target="blank">Kit::Contract</a> is all about.
+                  </p>
+                </li>
+                <li id="manifesto-microservices-vs-monolith">
+                  <h3 class="h5 pb-2">
+                    Microservices VS monolith<a class="hover-link" href="#manifesto-microservices-vs-monolith"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                  </h3>
+                  <p class="text-muted">
+                    We believe the whole microservices VS monolith debate is meaningless: in effect, the difference should purely be a production detail. 
+                  </p>
+                  <p class="text-muted">
+                    A powerful pattern is to use single repo with multiple domains and libraries, all registered as independent gems. In effect: a monolith, where every domain is already designed as a micro-service.
+                  </p>
+                  <p class="text-muted">
+                    You can expose these domains in production as one or several apps based on your needs, it makes no difference.
+                  </p>
+                  <p class="text-muted">
+                    These domains are mounted in <b>app containers</b> thanks to <a class="text-framework-component text-framework-component-kit-appcontainer-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-app-container" target="blank">Kit::AppContainer</a>.
+                  </p>
+                  <p class="text-muted">
+                    Access from the outside world and inter-domains communication is handled by <a class="text-framework-component text-framework-component-kit-router-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-router" target="blank">Kit::Router</a> .
+                  </p>
+                </li>
+                <li id="manifesto-data">
+                  <h3 class="h5 pb-2">
+                    About data<a class="hover-link" href="#manifesto-data"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                  </h3>
+                  <p class="text-muted">
+                    We believe the data persistence layer leaks in too many applications, where it slowly starts to become the app.
+                  </p>
+                  <p class="text-muted">
+                    With the domains approach, we favor representing the same table through <a href="https://mintcore.se/blog/2019/02/do-not-be-scared-of-using-the-same-table-for-different-schemas-in-ecto" target="_blank"></a>different models (<a href="https://mintcore.se/blog/2019/02/do-not-be-scared-of-using-the-same-table-for-different-schemas-in-ecto" target="_blank">here </a>is an example).
+                    <div></div>
+                  </p>
+                  <p class="text-muted">
+                    <a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS</a> is a great pattern when modeling the reality of using various data sources.
+                  </p>
+                  <p class="text-muted">
+                    Most applications would greatly benefit from using an immutable append-only log for writing data, and a snapshot of the current state of that data for reading, but the tooling / vendor database support is not there yet.
+                  </p>
+                  <p class="text-muted">
+                    In the meantime, we can still be explicit about what model is used for reading or writing, and what data source they should hit (<a class="text-framework-component text-framework-component-kit-config-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-config" target="blank">Kit::Config</a> makes this trivial). If you only use one database, you have lost no time, and if it needs to evolve one day, your code won't need to change much.
+                  </p>
+                  <p class="text-muted">
+                    Having an append-only write log blends has two big advantages: it can be used to send events to external services (emailing, analytics, etc.), and it gives you a way to restore the system in a specific state if you ever need to.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-5" id="roadmap">
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="position-relative">
+                The road to <span class="text-monospace text-primary">v0.1.0</span><a class="hover-link" href="#roadmap"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                <div class="links">
+                  <a class="learn-more" href="https://github.com/rubykit/kit/milestone/1" target="_blank">GitHub Milestone</a><a class="learn-more" href="https://github.com/rubykit/kit/projects/1" target="_blank">GitHub Project</a>
+                </div>
+              </h2>
+              <p class="mb-0">
+                The first usable release is a work in progress.
+              </p>
+              <p class="mb-0">
+                Here is an overview of some of the components we are working on.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container-lg mt-5">
+          <div class="row" id="roadmap-domains">
+            <div class="col-12">
+              <h3 class="position-relative">
+                Domains<a class="hover-link" href="#roadmap-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+              </h3>
+              <p class="mb-0">
+                Fully-fledged domains included in <span class="text-monospace text-primary">Kit</span>.
+              </p>
+            </div>
+          </div>
+          <div class="row mx-lg-n4 mt-md-4">
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/domains/kit-auth" target="_blank" title="Kit::Auth">
+                <div class="fw-component" data-gem-name="kit-auth">
+                  <div class="fw-component-completion">
+                    <i>😭 </i>40%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Auth
+                  </div>
+                  <div class="fw-component-desc">
+                    Authentication &amp; authorization out of the box.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/domains/kit-geolocation" target="_blank" title="Kit::Geolocation">
+                <div class="fw-component" data-gem-name="kit-geolocation">
+                  <div class="fw-component-completion">
+                    <i>🧪 </i>RESEARCH
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Geolocation
+                  </div>
+                  <div class="fw-component-desc">
+                    Static &amp; dynamic ip based geolocation.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/domains/kit-payment" target="_blank" title="Kit::Payment">
+                <div class="fw-component" data-gem-name="kit-payment">
+                  <div class="fw-component-completion">
+                    <i>🧪 </i>RESEARCH
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Payment
+                  </div>
+                  <div class="fw-component-desc">
+                    Everything you need to collect money.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container-lg mt-5">
+          <div class="row" id="roadmap-libraries-code">
+            <div class="col-12">
+              <h3 class="position-relative">
+                Code related libraries<a class="hover-link" href="#roadmap-libraries-code"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+              </h3>
+              <p class="mb-0">
+                How we make clean, readable & documented code.
+              </p>
+            </div>
+          </div>
+          <div class="row mx-lg-n4 mt-md-4">
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-organizer" target="_blank" title="Kit::Organizer">
+                <div class="fw-component" data-gem-name="kit-organizer">
+                  <div class="fw-component-completion">
+                    <i>🎉 </i>100%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Organizer
+                  </div>
+                  <div class="fw-component-desc">
+                    Handles code flow.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-organizer" target="_blank" title="Kit::Contract">
+                <div class="fw-component" data-gem-name="kit-contract">
+                  <div class="fw-component-completion">
+                    <i>😓 </i>80%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Contract
+                  </div>
+                  <div class="fw-component-desc">
+                    Validations for all your data.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-error" target="_blank" title="Kit::Error">
+                <div class="fw-component" data-gem-name="kit-error">
+                  <div class="fw-component-completion">
+                    <i>😓 </i>60%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Error
+                  </div>
+                  <div class="fw-component-desc">
+                    Universal error handling in your code.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row mx-lg-n4 mt-md-4">
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-doc-yard" target="_blank" title="Kit::Doc::Yard">
+                <div class="fw-component" data-gem-name="kit-doc-yard">
+                  <div class="fw-component-completion">
+                    <i>🎉 </i>100%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Doc::Yard
+                  </div>
+                  <div class="fw-component-desc">
+                    Generates ExDoc like documentation through Yard.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container-lg mt-5">
+          <div class="row" id="roadmap-libraries-domains">
+            <div class="col-12">
+              <h3 class="position-relative">
+                Domains libraries<a class="hover-link" href="#roadmap-libraries-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+              </h3>
+              <p class="mb-0">
+                What lets us design domains.
+              </p>
+            </div>
+          </div>
+          <div class="row mx-lg-n4 mt-md-4">
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-domain" target="_blank" title="Kit::Domain">
+                <div class="fw-component" data-gem-name="kit-domain">
+                  <div class="fw-component-completion">
+                    <i>😓 </i>50%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Domain
+                  </div>
+                  <div class="fw-component-desc">
+                    Build your own domains.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-app-container" target="_blank" title="Kit::AppContainer">
+                <div class="fw-component" data-gem-name="kit-appcontainer">
+                  <div class="fw-component-completion">
+                    <i>😓 </i>80%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::AppContainer
+                  </div>
+                  <div class="fw-component-desc">
+                    Expose your domains to the world or each-other.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-router" target="_blank" title="Kit::Router">
+                <div class="fw-component" data-gem-name="kit-router">
+                  <div class="fw-component-completion">
+                    <i>😭 </i>40%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Router
+                  </div>
+                  <div class="fw-component-desc">
+                    Decouples transport from your controllers.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row mx-lg-n4 mt-md-4">
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-json-api" target="_blank" title="Kit::JsonApi">
+                <div class="fw-component" data-gem-name="kit-jsonapi">
+                  <div class="fw-component-completion">
+                    <i>😓 </i>60%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::JsonApi
+                  </div>
+                  <div class="fw-component-desc">
+                    An extensive JSON:API server implementation.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-active-admin" target="_blank" title="Kit::Admin">
+                <div class="fw-component" data-gem-name="kit-admin">
+                  <div class="fw-component-completion">
+                    <i>😭 </i>0%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Admin
+                  </div>
+                  <div class="fw-component-desc">
+                    Admin webapp for your domain.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container-lg mt-5">
+          <div class="row" id="roadmap-libraries-utilities">
+            <div class="col-12">
+              <h3 class="position-relative">
+                Utilities libraries<a class="hover-link" href="#roadmap-libraries-utilities"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+              </h3>
+              <p class="mb-0">
+                Various libs we rely on.
+              </p>
+            </div>
+          </div>
+          <div class="row mx-lg-n4 mt-md-4">
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-dotenv" target="_blank" title="Kit::Config">
+                <div class="fw-component" data-gem-name="kit-config">
+                  <div class="fw-component-completion">
+                    <i>😭 </i>0%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Config
+                  </div>
+                  <div class="fw-component-desc">
+                    Extensible configuration management system.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-pagination" target="_blank" title="Kit::Pagination">
+                <div class="fw-component" data-gem-name="kit-pagination">
+                  <div class="fw-component-completion">
+                    <i>🎉 </i>100%
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Pagination
+                  </div>
+                  <div class="fw-component-desc">
+                    Absolute set pagination.
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 px-lg-4 mt-3 mt-md-0">
+              <a href="https://github.com/rubykit/kit/tree/master/libraries/kit-store" target="_blank" title="Kit::Store">
+                <div class="fw-component" data-gem-name="kit-store">
+                  <div class="fw-component-completion">
+                    <i>🧪 </i>RESEARCH
+                  </div>
+                  <div class="fw-component-name h6 text-monospace">
+                    Kit::Store
+                  </div>
+                  <div class="fw-component-desc">
+                    In memory database. Brings Microsoft LINQ features to Ruby.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row pt-4 pb-4">
+          <div class="col-md-12 text-center">
+            <p class="my-0">
+              Want to connect? Join us on <a href="https://discord.gg/9UbGzdq" target="_blank"><img class="discord-link" src="https://discord.com/assets/192cb9459cbc0f9e73e2591b700f1857.svg" target="_blank" title="Discord" /></a>
+            </p>
+            <p class="small text-monospace mt-3 mb-0">
+              Built with <i>❤️ </i>and a <i>🇫🇷 </i>accent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
