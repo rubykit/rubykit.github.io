@@ -8,6 +8,7 @@ var ghPages     = require('gulp-gh-pages');
 const src = {
   'path':    'src/',
 
+  'cname':   'src/CNAME',
   'favicon': 'src/assets/favicon/*',
   'fonts':   'src/assets/fonts/**/*',
   'images':  'src/assets/images/**/*',
@@ -16,13 +17,14 @@ const src = {
 };
 
 const dst = {
-  'path':    "dist/",
+  'path':    'dist/',
 
-  'css':     "dist/assets/css",
-  'favicon': "dist/assets/favicon",
-  'fonts':   "dist/assets/fonts",
-  'html':    "dist/",
-  'images':  "dist/assets/images",
+  'cname':   'dist/',
+  'css':     'dist/assets/css',
+  'favicon': 'dist/assets/favicon',
+  'fonts':   'dist/assets/fonts',
+  'html':    'dist/',
+  'images':  'dist/assets/images',
 };
 
 gulp.task('clean', function() {
@@ -52,7 +54,7 @@ gulp.task('slim', function() {
     .on('end', browserSync.reload);
 });
 
-['favicon', 'fonts', 'images'].forEach(function(type) {
+['cname', 'favicon', 'fonts', 'images'].forEach(function(type) {
   gulp.task(type, function() {
     return gulp
       .src(src[type])
@@ -60,21 +62,21 @@ gulp.task('slim', function() {
   });
 });
 
-gulp.task('assets', gulp.parallel(['favicon', 'fonts', 'images', 'sass', 'slim']));
+gulp.task('assets', gulp.parallel(['cname', 'favicon', 'fonts', 'images', 'sass', 'slim']));
 
 gulp.task('serve', function (done) {
   browserSync.init({
     server: {
       baseDir: dst.path,
       serveStaticOptions: {
-        extensions: ["html"],
+        extensions: ['html'],
       },
     },
   });
 
-  gulp.watch("src/assets/scss/application.scss", gulp.series('sass'));
-  gulp.watch("src/assets/scss/**/*.scss", gulp.series('sass'));
-  gulp.watch("src/content/**/*.slim", gulp.series('slim'));
+  gulp.watch('src/assets/scss/application.scss', gulp.series('sass'));
+  gulp.watch('src/assets/scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('src/content/**/*.slim', gulp.series('slim'));
 
   done();
 });
