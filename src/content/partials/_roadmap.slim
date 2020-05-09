@@ -149,7 +149,7 @@ ruby:
 section#roadmap.py-5
   .container-lg
     .row
-      .col-12
+      .col-sm-6
         h2.position-relative
           ' The road to
           span.text-monospace.text-primary
@@ -158,11 +158,14 @@ section#roadmap.py-5
             span.icon-link aria-hidden="true"
             span.sr-only
               | Link to this section
-          .links
-            a.learn-more href='https://github.com/rubykit/kit/milestone/1' target='_blank'
-              | GitHub Milestone
-            a.learn-more href='https://github.com/rubykit/kit/projects/1' target='_blank'
-              | GitHub Project
+      .col-sm-6.align-self-end
+        .links.text-right.pb-3
+          a.learn-more href='https://github.com/rubykit/kit/milestone/1' target='_blank'
+            | GitHub Milestone
+          a.learn-more href='https://github.com/rubykit/kit/projects/1' target='_blank'
+            | GitHub Project
+    .row
+      .col-12
         p.mb-0
           | The first usable release is a work in progress.
         p.mb-0
