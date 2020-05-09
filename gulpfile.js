@@ -25,6 +25,14 @@ const dst = {
   'fonts':   'dist/assets/fonts',
   'html':    'dist/',
   'images':  'dist/assets/images',
+  'vendors': 'dist/assets/vendor',
+};
+
+const vendors = {
+  'js': [
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/jquery/dist/jquery.min.js',
+  ],
 };
 
 gulp.task('clean', function() {
@@ -62,7 +70,12 @@ gulp.task('slim', function() {
   });
 });
 
-gulp.task('assets', gulp.parallel(['cname', 'favicon', 'fonts', 'images', 'sass', 'slim']));
+gulp.task('vendors-js', function () {
+  return gulp.src(vendors['js'])
+    .pipe(gulp.dest(dst['vendors'] + '/js'));
+});
+
+gulp.task('assets', gulp.parallel(['cname', 'favicon', 'fonts', 'images', 'sass', 'slim', 'vendors-js']));
 
 gulp.task('serve', function (done) {
   browserSync.init({
