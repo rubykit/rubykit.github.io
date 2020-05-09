@@ -78,33 +78,33 @@
               <ol class="pl-0">
                 <li id="manifesto-ruby-rails">
                   <h3 class="h5 pb-2">
-                    We like Rails, but it does not teach you how to write extensible code<a class="hover-link" href="#manifesto-ruby-rails"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                    We like Rails, but it does not teach you how to write extensible code<a class="hover-link" href="#manifesto-ruby-rails"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
                   </h3>
                   <p class="text-muted">
-                    <a href="https://rubyonrails.org/" target="_blank">Rails</a> has many interesting aspects, but after you hit a controller, you're on your own. How are you supposed to organize your code?
+                    <a href="https://rubyonrails.org/" target="_blank">Rails</a> is interesting in many ways, but after you hit a controller, you're on your own. How the heck are you supposed to organize your code?
                   </p>
                   <p class="text-muted">
-                    <a href="https://guides.rubyonrails.org/engines.html" target="_blank">Engines </a>are a great step, but how do you actually write an extensible one?
+                    In terms of reusability, <a href="https://guides.rubyonrails.org/engines.html" target="_blank">Engines </a>are a significant step, but how do you write an extensible one?
                   </p>
                   <p class="text-muted">
-                    We think that many of the abstractions provided fall short, or are missing entirely. Sure, you can always make it work with any technology, but it is time-consuming.
+                    We think many useful abstractions are missing, and that the ones provided often fall short. Sure, as with any technology, you can always make it work. But it will be time-consuming.
                   </p>
                   <p class="text-muted">
-                    So <span class="text-framework-component text-primary">Kit</span> is built on top of Rails, and when we can leverage what it already does, we gladly do. We use Engines, Railties, and ActiveRecord explicitly, but the rest is hidden behind connectors. If you are already on Rails, what we provide is fully opt-in, but you'll find that the reasons to interact with Rails disappear rapidly.
+                    We built <span class="text-framework-component text-primary">Kit</span> on top of Rails, and it is fully opt-in. When we can leverage what it does well, we gladly do. We use Engines, Railties, and ActiveRecord explicitly, and hide the rest behind connectors. You'll find that the reasons to interact with Rails disappear rapidly.
                   </p>
                   <p class="text-muted">
-                    The real question that led to <span class="text-framework-component text-primary">Kit</span> is: how do I write extensible code?
+                    The genuine question that led to <span class="text-framework-component text-primary">Kit</span> is: how do I write extensible code?
                   </p>
                 </li>
                 <li id="manifesto-domains">
                   <h3 class="h5 pb-2">
-                    Domains<a class="hover-link" href="#manifesto-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                    Domains<a class="hover-link" href="#manifesto-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
                   </h3>
                   <p class="text-muted">
-                    <a href="https://martinfowler.com/bliki/DomainDrivenDesign.html" target="_blank">Domain Driven Design </a>and particularly <a href="https://martinfowler.com/bliki/BoundedContext.html" target="_blank">Bounded Contexts </a>help a great deal to design your applications, reason about dependencies and write reusable code.
+                    <a href="https://martinfowler.com/bliki/DomainDrivenDesign.html" target="_blank">Domain Driven Design </a>and particularly <a href="https://martinfowler.com/bliki/BoundedContext.html" target="_blank">Bounded Contexts </a>help a greatly to design your applications, reason about dependencies and write reusable code.
                   </p>
                   <p class="text-muted">
-                    <span class="text-framework-component text-primary">Kit</span> includes several ready to use domains. In our case, they are fully-fledged apps that contain: the business logic for a specific part of the system, a ready to use JSON:API app, a user-facing web-app, and user-facing admin web-app.
+                    <span class="text-framework-component text-primary">Kit</span> includes several ready-to-use domains. They are fully-fledged apps containing: the business logic for a specific part of the system, a ready-to-use JSON:API app, a user-facing web-app, and user-facing admin web-app.
                   </p>
                   <p class="text-muted">
                     These domains can be deployed as standalone apps or included as libraries in other domains.
@@ -115,24 +115,24 @@
                 </li>
                 <li id="manifesto-functional-programming">
                   <h3 class="h5 pb-2">
-                    Functional programming<a class="hover-link" href="#manifesto-functional-programming"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                    Functional programming<a class="hover-link" href="#manifesto-functional-programming"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
                   </h3>
                   <p class="text-muted">
-                    We think one of the reasons Rails is not particularly extensible is that it relies heavily on mixins & inheritance. So if you want to reuse a single utility method, you have to buy into a hierarchy of objects that you need to compose with and instantiate in a specific way.
+                    We think one reason Rails is not that extensible stems from relying heavily on mixins & inheritance. When you want to reuse a single utility method, you often have to instantiate or compose with a complex hierarchy of objects.
                   </p>
                   <p class="text-muted">
-                    This leads to code where the contracts are difficult to understand, and that is not easy to unit test.
+                    This leads to code where the contracts are difficult to understand, and that is difficult to unit test.
                   </p>
                   <p class="text-muted">
-                    We try to avoid some shortfalls of OOP, and separate the code from the data. This helps a great deal when reasoning about mutability and what you are actually trying to accomplish.
+                    We try to avoid some shortfalls of OOP, and separate the code from the data. This helps greatly when reasoning about mutability and what you are actually trying to accomplish.
                   </p>
                   <p class="text-muted">
-                    We mostly use Modules with Class methods that you can call from anywhere.
+                    We mostly use Modules with Class methods that you can call from anywhere, or plain lambdas.
                   </p>
                 </li>
                 <li id="manifesto-railway-oriented-programming">
                   <h3 class="h5 pb-2">
-                    Railway oriented programming<a class="hover-link" href="#manifesto-railway-oriented-programming"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                    Railway oriented programming<a class="hover-link" href="#manifesto-railway-oriented-programming"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
                   </h3>
                   <p class="text-muted">
                     This lends itself very well to <a href="https://fsharpforfunandprofit.com/rop/" target="_blank">Railway oriented programming</a>.
@@ -143,7 +143,7 @@
                 </li>
                 <li id="manifesto-contracts">
                   <h3 class="h5 pb-2">
-                    Contracts<a class="hover-link" href="#manifesto-contracts"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                    Contracts<a class="hover-link" href="#manifesto-contracts"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
                   </h3>
                   <p class="text-muted">
                     Static typing is a powerful tool that will be part of Ruby 3.
@@ -152,33 +152,33 @@
                     But as a programmer, what you actually want to do is enforce constraints like "this should be a positive int, lower than 10" or "this should be an array where the second index is a string with value X".
                   </p>
                   <p class="text-muted">
-                    In these situations, static typing falls short, because we need <a href="https://en.wikipedia.org/wiki/Dependent_type" target="_blank">dependent types</a> (types that also include values). They often can not be solved at compile / transpile time, because the values are not known yet.
+                    In these situations, static typing falls short: you need <a href="https://en.wikipedia.org/wiki/Dependent_type" target="_blank">dependent types</a> (types that also include values). They often can not be solved at compile / transpile time, as the values are not known yet.
                   </p>
                   <p class="text-muted">
-                    As a result, you end up having to use several data validation primitives: one in the language for types, and one in your codebase for actual values (think: validating form data, checking that a function parameter as a specific value, etc.).
+                    As a result, you end up having to use several data validation primitives: one in the language that deals with types, and one in your project to validate your data (from a form, from a function parameter, etc.).
                   </p>
                   <p class="text-muted">
                     We believe that there should only be one, opt-in, validation primitive.
                   </p>
                   <p class="text-muted">
-                    We take inspiration from <a href="" target="_blank">design by contract</a>, and that is what <a class="text-framework-component text-framework-component-kit-contract-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-organizer" target="blank">Kit::Contract</a> is all about.
+                    We add support for <a href="https://en.wikipedia.org/wiki/Design_by_contract" target="_blank">design by contract</a> through <a class="text-framework-component text-framework-component-kit-contract-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-organizer" target="blank">Kit::Contract</a>.
                   </p>
                 </li>
                 <li id="manifesto-microservices-vs-monolith">
                   <h3 class="h5 pb-2">
-                    Microservices VS monolith<a class="hover-link" href="#manifesto-microservices-vs-monolith"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                    Micro-services VS monolith<a class="hover-link" href="#manifesto-microservices-vs-monolith"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
                   </h3>
                   <p class="text-muted">
-                    We believe the whole microservices VS monolith debate is meaningless: in effect, the difference should purely be a production detail. 
+                    We believe the whole micro-services VS monolith debate is meaningless: the difference should only be a production detail. 
                   </p>
                   <p class="text-muted">
-                    A powerful pattern is to use single repo with multiple domains and libraries, all registered as independent gems. In effect: a monolith, where every domain is already designed as a micro-service.
+                    We use a single repo containing multiple domains and libraries, all set-up as independent gems. In effect: a monolith, where every domain is already designed as a micro-service.
                   </p>
                   <p class="text-muted">
-                    You can expose these domains in production as one or several apps based on your needs, it makes no difference.
+                    In production, you can expose these domains as one or several apps based on your needs, it makes no difference.
                   </p>
                   <p class="text-muted">
-                    These domains are mounted in <b>app containers</b> thanks to <a class="text-framework-component text-framework-component-kit-appcontainer-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-app-container" target="blank">Kit::AppContainer</a>.
+                    We mount these domains in <b>app containers</b> thanks to <a class="text-framework-component text-framework-component-kit-appcontainer-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-app-container" target="blank">Kit::AppContainer</a>.
                   </p>
                   <p class="text-muted">
                     Access from the outside world and inter-domains communication is handled by <a class="text-framework-component text-framework-component-kit-router-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-router" target="blank">Kit::Router</a> .
@@ -186,26 +186,26 @@
                 </li>
                 <li id="manifesto-data">
                   <h3 class="h5 pb-2">
-                    About data<a class="hover-link" href="#manifesto-data"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                    About data<a class="hover-link" href="#manifesto-data"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
                   </h3>
                   <p class="text-muted">
-                    We believe the data persistence layer leaks in too many applications, where it slowly starts to become the app.
+                    We believe the data persistence layer leaks in too many applications, where it slowly becomes the app.
                   </p>
                   <p class="text-muted">
-                    With the domains approach, we favor representing the same table through <a href="https://mintcore.se/blog/2019/02/do-not-be-scared-of-using-the-same-table-for-different-schemas-in-ecto" target="_blank"></a>different models (<a href="https://mintcore.se/blog/2019/02/do-not-be-scared-of-using-the-same-table-for-different-schemas-in-ecto" target="_blank">here </a>is an example).
+                    We often access a table through different models based on what they represent in a given domain (<a href="https://mintcore.se/blog/2019/02/do-not-be-scared-of-using-the-same-table-for-different-schemas-in-ecto" target="_blank">here </a>is an example).
                     <div></div>
                   </p>
                   <p class="text-muted">
-                    <a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS</a> is a great pattern when modeling the reality of using various data sources.
+                    <a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">CQRS</a> is a great pattern to deal with the reality of using various data sources.
                   </p>
                   <p class="text-muted">
-                    Most applications would greatly benefit from using an immutable append-only log for writing data, and a snapshot of the current state of that data for reading, but the tooling / vendor database support is not there yet.
+                    Most applications would benefit from using an immutable, append-only write store, and from using a snapshot of the current state of the data as a read store. Sadly, the tooling and vendor database support are not there yet.
                   </p>
                   <p class="text-muted">
-                    In the meantime, we can still be explicit about what model is used for reading or writing, and what data source they should hit (<a class="text-framework-component text-framework-component-kit-config-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-config" target="blank">Kit::Config</a> makes this trivial). If you only use one database, you have lost no time, and if it needs to evolve one day, your code won't need to change much.
+                    In the meantime, we can still be explicit about what model we use for reading or writing, and what store they should hit (<a class="text-framework-component text-framework-component-kit-config-color-light" href="https://github.com/rubykit/kit/tree/master/libraries/kit-config" target="blank">Kit::Config</a> makes this trivial). 
                   </p>
                   <p class="text-muted">
-                    Having an append-only write log blends has two big advantages: it can be used to send events to external services (emailing, analytics, etc.), and it gives you a way to restore the system in a specific state if you ever need to.
+                    Even if the "append-only write store" can not be your data's source of truth, it can send events to external services (emailing, analytics, advertising, marketing automation, etc.), and if persisted you gain the ability to restore the system in a past state for audit.
                   </p>
                 </li>
               </ol>
@@ -218,7 +218,7 @@
           <div class="row">
             <div class="col-sm-6">
               <h2 class="position-relative">
-                The road to <span class="text-monospace text-primary">v0.1.0</span><a class="hover-link" href="#roadmap"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                The road to <span class="text-monospace text-primary">v0.1.0</span><a class="hover-link" href="#roadmap"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
               </h2>
             </div>
             <div class="col-sm-6 align-self-end">
@@ -242,7 +242,7 @@
           <div class="row" id="roadmap-domains">
             <div class="col-12">
               <h3 class="position-relative">
-                Domains<a class="hover-link" href="#roadmap-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                Domains<a class="hover-link" href="#roadmap-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
               </h3>
               <p class="mb-0">
                 Fully-fledged domains included in <span class="text-monospace text-primary">Kit</span>.
@@ -301,7 +301,7 @@
           <div class="row" id="roadmap-libraries-code">
             <div class="col-12">
               <h3 class="position-relative">
-                Code related libraries<a class="hover-link" href="#roadmap-libraries-code"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                Code related libraries<a class="hover-link" href="#roadmap-libraries-code"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
               </h3>
               <p class="mb-0">
                 How we make clean, readable & documented code.
@@ -377,7 +377,7 @@
           <div class="row" id="roadmap-libraries-domains">
             <div class="col-12">
               <h3 class="position-relative">
-                Domains libraries<a class="hover-link" href="#roadmap-libraries-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                Domains libraries<a class="hover-link" href="#roadmap-libraries-domains"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
               </h3>
               <p class="mb-0">
                 What lets us design domains.
@@ -468,7 +468,7 @@
           <div class="row" id="roadmap-libraries-utilities">
             <div class="col-12">
               <h3 class="position-relative">
-                Utilities libraries<a class="hover-link" href="#roadmap-libraries-utilities"><span aria-hidden="true" class="icon-link"></span><span class="sr-only">Link to this section</span></a>
+                Utilities libraries<a class="hover-link" href="#roadmap-libraries-utilities"><span aria-hidden="true" class="icon-link"></span><span class="sr-only no-select">Link to this section</span></a>
               </h3>
               <p class="mb-0">
                 Various libs we rely on.
