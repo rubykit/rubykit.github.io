@@ -56,6 +56,7 @@ gulp.task('slim', function() {
     .src(src.slim)
     .pipe(slim({
       pretty:  true,
+      options: 'format=:html',
       require: ['slim/include'],
     }))
     .pipe(gulp.dest(dst.html))
