@@ -10081,7 +10081,7 @@ h1:hover a.hover-link, h2:hover a.hover-link, h3:hover a.hover-link, h4:hover a.
   color: #027a7e !important;
 }
 
-body.debug::before {
+body.debug-media-queries::before {
   position: fixed;
   top: 0;
   left: 0;
@@ -10091,28 +10091,28 @@ body.debug::before {
   color: #fff;
 }
 
-body.debug::before {
-  content: "";
+body.debug-media-queries::before {
+  content: " < xs < 575.98px";
 }
 
 @media (min-width: 576px) {
-  body.debug::before {
-    content: "-sm";
+  body.debug-media-queries::before {
+    content: "576px < sm < 767.98px";
   }
 }
 @media (min-width: 768px) {
-  body.debug::before {
-    content: "-md";
+  body.debug-media-queries::before {
+    content: "768px < md < 991.98px";
   }
 }
 @media (min-width: 992px) {
-  body.debug::before {
-    content: "-lg";
+  body.debug-media-queries::before {
+    content: "992px < lg < 1199.98px";
   }
 }
 @media (min-width: 1200px) {
-  body.debug::before {
-    content: "-xl";
+  body.debug-media-queries::before {
+    content: "1200px < xl < ";
   }
 }
 .navbar-dark .navbar-nav .nav-link {
@@ -10280,12 +10280,6 @@ a.nav-link {
   padding: 5px 10px;
   border-radius: 0px 0px 4px 4px;
   background-color: rgba(255, 255, 255, 0.8);
-}
-
-.links {
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
 
 .learn-more {
