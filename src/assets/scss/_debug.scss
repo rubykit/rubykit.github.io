@@ -1,4 +1,4 @@
-body.debug {
+body.debug-media-queries {
 
   &::before {
     position:   fixed;
@@ -12,13 +12,14 @@ body.debug {
 
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $name in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($name) {
+    $min-width: breakpoint-min($name, $grid-breakpoints);
+    $max-width: breakpoint-max($name, $grid-breakpoints);
 
-    body.debug {
+    body.debug-media-queries {
       &::before {
-        content: "#{$infix}";
+        content: "#{$min-width} < #{$name} < #{$max-width}";
       }
     }
   }
