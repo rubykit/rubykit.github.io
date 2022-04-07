@@ -1,6 +1,11 @@
 - (framework_components_list || []).each_slice(3).to_a.each_with_index do |sublist|
   .row.mx-lg-n4.mt-md-4
-    - sublist.each do |name:, desc:, href:, status:|
+    - sublist.each do |el|
+      - name   = el[:name]
+      - desc   = el[:desc]
+      - href   = el[:href]
+      - status = el[:status]
+
       .col-md-4.px-lg-4.mt-3.mt-md-0
         a href=href title=name target='_blank'
           .fw-component data-gem-name='#{ name.downcase.gsub('::', '-') }'
