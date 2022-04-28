@@ -64,4 +64,4 @@
 
           | #{ name }
         .fw-component-desc
-          == desc
+          == desc.gsub('<br/>', '<div class="mt-2"></div>')
