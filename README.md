@@ -1,4 +1,4 @@
-<img align="left" width="50" height="90" src="https://raw.githubusercontent.com/rubykit/kit/master/docs/assets/logo.v1.svg">
+<img align="left" width="50" height="90" src="https://raw.githubusercontent.com/rubykit/kit/master/docs/assets/images/rubykit-framework-logo.svg">
 
 # Rubykit Framework static website.
 
