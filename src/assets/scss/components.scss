@@ -1,0 +1,69 @@
+.fw-component {
+  @extend .card;
+  @extend .shadow-sm;
+
+  height:    100%;
+
+  $bg-color: #fafafa;
+
+  padding:    15px;
+  border:     dashed 1px $text-muted;
+  //border: 0px;
+  background: $bg-color;
+  color:      black;
+  //transition: 0.2s;
+  //box-shadow: 0px 2px 15px rgba(0,0,0,0.1);
+
+  &:hover {
+    //transform: translate(0px, -4px);
+    background: darken($bg-color, 2%);
+    color:     black;
+    cursor:    pointer;
+  }
+
+  svg {
+    height: 20px;
+    @extend .me-2;
+    position: relative;
+    top: -2px;
+  }
+
+  .fw-component-name {
+    @extend .font-monospace;
+    @extend .h5;
+    @extend .fw-600;
+  }
+
+  .fw-component-desc {
+    //@extend .font-monospace;
+    font-size: 12px;
+  }
+
+  @each $name, $glist in $gradients {
+    &[data-gem-name='#{$name}'] {
+      background-image: linear-gradient(to bottom right, list.nth($glist, 1), list.nth($glist, -1));
+
+      .fw-component-completion {
+        color: list.nth($glist, -1);
+      }
+    }
+  }
+}
+
+.learn-more {
+  @extend         .fw-normal;
+
+  margin-left:    1em;
+  color:          #555;
+  font-size:      0.9rem;
+  font-style:     italic;
+  border-bottom:  1px dashed $text-muted;
+  padding-bottom: 2px;
+}
+
+:root {
+  @each $name, $glist in $gradients {
+    --cs_#{$name}: #{ list.nth($glist, 1) };
+    --ce_#{$name}: #{ list.nth($glist, -1) };
+  }
+}

@@ -4,13 +4,31 @@
 // Bootstrap setup -------------------------------------------------------------
 
 @import '../../../node_modules/bootstrap/scss/_functions';
+@import '../../../node_modules/@rubykit/kit_theme_bootstrap/app/assets/stylesheets/kit_theme_bootstrap/theme/functions';
+
 @import '_variables';
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import '../../../node_modules/@rubykit/kit_theme_bootstrap/app/assets/stylesheets/kit_theme_bootstrap/theme/variables/bootstrap';
+@import '../../../node_modules/bootstrap/scss/_variables';
+@import '../../../node_modules/@rubykit/kit_theme_bootstrap/app/assets/stylesheets/kit_theme_bootstrap/theme/variables/kit';
+
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+@import '../../../node_modules/@rubykit/kit_theme_bootstrap/app/assets/stylesheets/kit_theme_bootstrap/theme/mixins';
+@import '../../../node_modules/@rubykit/kit_theme_bootstrap/app/assets/stylesheets/kit_theme_bootstrap/theme/components';
+@import '../../../node_modules/@rubykit/kit_theme_bootstrap/app/assets/stylesheets/kit_theme_bootstrap/theme/utilities';
+@import '../../../node_modules/@rubykit/kit_theme_bootstrap/app/assets/stylesheets/kit_theme_bootstrap/theme/vendor';
+
 
 // General setup ---------------------------------------------------------------
 
 body {
   letter-spacing: 0.5px;
+}
+
+.text-kit {
+  background: -webkit-linear-gradient(#de3f24 60%, #820c02);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bg-dark {
@@ -21,14 +39,12 @@ a {
   text-decoration: none !important;
 }
 
-i {
-  font-style: normal;
+.text-header {
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-@media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 960px;
-  }
+i {
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
+  -khtms-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -85,9 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 @import '_fonts';
 @import '_icons';
 @import '_framework_components';
-@import '_debug';
 
 @import 'header';
-@import 'manifesto';
-@import 'roadmap';
 @import 'footer';
+
+@import 'components';

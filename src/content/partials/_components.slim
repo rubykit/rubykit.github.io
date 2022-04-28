@@ -1,0 +1,306 @@
+ruby:
+
+  components = {
+    kit_bounded_contexts:   [
+      {
+        name:   'Kit::Auth',
+        desc:   "Complete bounded context to handle authentication & authorization.<br/>Contains all auth logic, web UI, API & Admin UI.",
+        href:   'https://github.com/rubykit/kit/tree/master/domains/kit-auth',
+        status: {
+          value: 40,
+          icon:  '😭',
+        },
+      },
+    ],
+    libs_code: [
+      {
+        name:   'Kit::Organizer',
+        desc:   'Improve your code flow with Railway Oriented Programming.<br/>Easily chain your methods & descrive your happy & errors paths.<br/>Customize to your need with the simple pluggin system.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-organizer',
+        status: {
+          value: 100,
+          icon:  '🎉',
+        },
+      },
+      {
+        name:   'Kit::Contract',
+        desc:   'Unified validation primitive for all your data. Contracts can be used on method signatures and provide an alternative to static typing. Form, DB or any data can be easily validated through ChangeSets.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-organizer',
+        status: {
+          value: 80,
+          icon:  '😓',
+        },
+      },
+      {
+        name:   'Kit::Error',
+        desc:   'Unified error mecanism for you your code.<br/>Report your errors to external backends (NewRelic, Sentry, etc) or persist them in your DB.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-error',
+        status: {
+          value: 60,
+          icon:  '😓',
+        },
+      },
+      {
+        name:   'Kit::Doc',
+        desc:   'Generates versionned & beautiful looking documentation through Markdown in comments.<br/>It uses Yard to generate ExDoc compatible output.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-doc-yard',
+        status: {
+          value: 100,
+          icon:  '🎉',
+        },
+      },
+    ],
+    libs_bounded_contexts:   [
+
+      {
+        name:   'Kit::Api',
+        desc:   'Describe the Resources you want the API to expose and it becomes available over JSON:API and soon GraphQL!<br/>Handles pagination, filtering & resources linkage out the box, even when the Resources do not live on the same DB.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-api',
+        status: {
+          value: 60,
+          icon:  '😓',
+        },
+      },
+      {
+        name:   'Kit::Admin',
+        desc:   'Admin web interface for the bounded context.<br/>Currently using ActiveAdmin with a system of resource descriptions.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-active_admin',
+        status: {
+          value: 0,
+          icon:  '😭',
+        },
+      },
+      {
+        name:   'Kit::ViewComponents',
+        desc:   'A set of reusable View components for Forms, Inputs, Alerts, SEO, etc.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-view_components',
+        status: {
+          value: 0,
+          icon:  '😭',
+        },
+      },
+      {
+        name:   'Kit::ThemeBootstrap',
+        desc:   'A Bootstrap Theme',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-active-admin',
+        status: {
+          value: 0,
+          icon:  '😭',
+        },
+      },
+    ],
+    libs_apps: [
+      {
+        name:   'Kit::BoundedContext',
+        desc:   'Basic layout & configuration to build your "bounded contexts".<br/>Kit\'s bounded contexts usually include the business logic for a number of Models + Web UI + API + Admin UI',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-domain',
+        status: {
+          value: 50,
+          icon:  '😓',
+        },
+      },
+      {
+        name:   'Kit::AppContainer',
+        desc:   'Application container to serve bounded contexts.<br/>Use 1 AppContainer to deploy as a monolith, or N AppContainers to deploy as micro-services without having to change a single line of code inside your bounded contexts!',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-app-container',
+        status: {
+          value: 80,
+          icon:  '😓',
+        },
+      },
+      {
+        name:   'Kit::Router',
+        desc:   'Expose bounded contexts\' endpoints to the world and between multiple bounded contexts.<br/>The Router deals with the various protocols to expose endpoints (HTTP, Mailer) and connect bounded contextes together.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-router',
+        status: {
+          value: 40,
+          icon:  '😭',
+        },
+      },
+      {
+        name:   'Kit::DummyAppContainer',
+        desc:   'Application container that can be embedded inside BoundedContext in order to test them easily.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-dummy-app-container',
+        status: {
+          value: 80,
+          icon:  '😓',
+        },
+      },
+    ],
+
+    libs_utilities: [
+      {
+        name:   'Kit::Config',
+        desc:   'Extensible configuration management system.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-dotenv',
+        status: {
+          value: 0,
+          icon:  '😭',
+        },
+      },
+      {
+        name:   'Kit::Pagination',
+        desc:   'Absolute set pagination.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-pagination',
+        status: {
+          value: 100,
+          icon:  '🎉',
+        },
+      },
+      {
+        name:   'Kit::Store',
+        desc:   'In memory database. Brings Microsoft LINQ features to Ruby.',
+        href:   'https://github.com/rubykit/kit/tree/master/libraries/kit-store',
+        status: {
+          value: 'Research',
+          icon:  '🧪',
+        },
+      },
+    ],
+  }
+
+section
+  .container-xl
+    .row
+      .col
+        hr
+
+  .container-xl
+    .row
+      .col
+        h2
+          | "kit provides comprehensive answers on how to write & organize your code at every level"
+    .row
+      .col-4
+        h5 How to organize code at a low level
+        ol
+          li How to write functions
+          li How to chain functions to describe higher level operations
+          li How to describe happy & error paths
+          li How to handle errors
+          li How to document properly
+
+      .col-4
+        h5 How to group units of code
+        .lead Domain: logic (around a set of models) + web UI + api client + admin UI
+
+      .col-4
+        h5 How should domains interact with each other & be exposed to outside the world?
+        .lead 
+
+
+section#roadmap.py-5
+  .container-xl
+    /.row
+      .col
+        h2.position-relative
+          ' Spend time building features for your users, not wondering how to architect them.
+          a.hover-link href="#roadmap"
+            span.icon-link aria-hidden="true"
+            span.sr-only.no-select
+              | Link to this section
+      /.col-sm-6.text-end
+        .links.text-right.pb-3
+          a.learn-more href='https://github.com/rubykit/kit/milestone/1' target='_blank'
+            | GitHub Milestone
+          a.learn-more href='https://github.com/rubykit/kit/projects/1' target='_blank'
+            | GitHub Project
+    .row
+      .col-12
+        p.mb-0
+          | A vast majority of what you'll build are <b>bounded contexts</b> and a few <b>utility libraries</b>.
+        p.mb-0
+          | With Kit, everything you build is a Rails engine that can be extracted to its own gem in minutes.
+
+
+
+  // Libraries -----------------------------------------------------------------
+  .container-xl.mt-5
+    .row#roadmap-libraries-utilities
+      .col-12
+        h3.position-relative
+          | Code deployment
+          a.hover-link href="#roadmap-libraries-utilities"
+            span.icon-link aria-hidden="true"
+            span.sr-only.no-select
+              | Link to this section
+        p.mb-0
+          | Various libs we rely on.
+
+    - framework_components_list = components[:libs_apps]
+    include src/content/partials/_framework_components_grid
+
+  // Domains -------------------------------------------------------------------
+  .container-xl.mt-5
+    .row#roadmap-libraries-domains
+      .col-12
+        h3.position-relative
+          | Bounded Contexts libraries
+          a.hover-link href="#roadmap-libraries-domains"
+            span.icon-link aria-hidden="true"
+            span.sr-only.no-select
+              | Link to this section
+        p.mb-0
+          | What helps us design domains.
+
+    - framework_components_list = components[:libs_bounded_contexts]
+    include src/content/partials/_framework_components_grid
+
+  // Code organization ---------------------------------------------------------
+  .container-xl.mt-5
+    .row#roadmap-libraries-code
+      .col-12
+        h3.position-relative
+          | How to write code
+          a.hover-link href="#roadmap-libraries-code"
+            span.icon-link aria-hidden="true"
+            span.sr-only.no-select
+              | Link to this section
+          /a.learn-more href='#' target='_blank'
+            | Learn more about how we write code
+        p.mb-0
+          | How to organize your code, express constraints, handle errors & document what's going on!
+
+    - framework_components_list = components[:libs_code]
+    include src/content/partials/_framework_components_grid
+
+
+  // Domains -------------------------------------------------------------------
+  .container-xl.mt-5
+    .row#roadmap-domains
+      .col-12
+        h3.position-relative
+          span.ff-ms.text-kit
+            | kit
+          | 's native bounded contexts
+          a.hover-link href="#roadmap-kit-bounded-contexts"
+            span.icon-link aria-hidden="true"
+            span.sr-only.no-select
+              | Link to this section
+          /a.learn-more href='#' target='_blank'
+            | Learn more about domains
+        p.mb-0
+          ' Bounded contexts already included in
+          span.ff-ms.text-kit
+            | kit
+          |  to speed up development.
+
+    - framework_components_list = components[:kit_bounded_contexts]
+    include src/content/partials/_framework_components_grid
+
+
+  // Libraries -----------------------------------------------------------------
+  /.container-xl.mt-5
+    .row#roadmap-libraries-utilities
+      .col-12
+        h3.position-relative
+          | Utilities libraries
+          a.hover-link href="#roadmap-libraries-utilities"
+            span.icon-link aria-hidden="true"
+            span.sr-only.no-select
+              | Link to this section
+        p.mb-0
+          | Various libs we rely on.
+
+    - framework_components_list = components[:libs_utilities]
+    include src/content/partials/_framework_components_grid

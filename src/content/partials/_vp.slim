@@ -1,18 +1,39 @@
 section
-  .container-lg
+  .container-xl
     .row.my-5
-      .col-12.py-5.text-center
+      .col-12.pt-2.pb-5.text-center
 
-        h1.font-weight-normal.pb-1
+        h1.fw-normal.mb-1.text-header style='font-weight: 300 !important; letter-spacing: 1px;'
           // Note: account for the difference in size between the two fonts
-          span.text-primary.text-monospace.font-weight-bold style="font-size: 2.7rem; margin-right: -0.85rem;"
-            ' Kit
-          ' is an
-          span.font-weight-bold
-            | all inclusive
-          i
-           '🍹
-          | web framework.
+          span.text-kit.ff-ms.fw-600 style="font-size: 2.7rem;"
+            | kit
+          '
+          ' is a
+          span.fw-bold
+            ' web framework
+          ' designed for
+          span.fw-bold
+            ' growth
+          i.ms-1
+           | 🚀
 
-        .h4.font-weight-normal
-          | Build growth-ready applications fast, using powerful patterns.
+        .h3.mb-0.pt-1 style='font-weight: 200 !important;'
+          | "Spend your time on building what your users need, not wondering how to do it."
+
+/section
+  .container-xl
+    .row
+      .col
+        hr
+
+    .row
+      .col
+        | Leverage Domain Driven Design to achieve:
+    .row
+      .col-4
+        h5 No more monolith VS micro-services
+        .lead Code once. Deploy as 1 or N applications, no change needed. Leverage DDD to build domains that can be deployed independently or together without any change to the domain.
+
+      .col-4
+        h5 Extract & open source the code that's not core to your business
+        .lead

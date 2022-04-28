@@ -1,35 +1,22 @@
-header.bg-dark
-  .container-lg
-    nav.navbar.navbar-dark.navbar-expand-sm.px-0
+header
+  .container-xl
+    nav.navbar.navbar-expand-sm.px-0
 
-      a.navbar-brand.text-monospace.mr-auto href="/"
+      a.navbar-brand.font-monospace.me-auto href="/"
         img.d-inline-block.align-top src="assets/images/rubykit-framework-logo.svg"
 
         // Let's cheat and pretend this is not monospace 😉
-        span.text-primary.font-weight-bold.ml-2.pl-1
-          span r
-          span style='letter-spacing: 3px;' u
-          span style='letter-spacing: 3px;' b
-          span style='letter-spacing: 3px;' y
-          span k
-          span style='letter-spacing: 0px;' i
-          span t
-        span.text-muted.ml-1.font-weight-light
-          span style='letter-spacing: 0px;' f
-          span style='letter-spacing: 0px;' r
-          span a
-          span m
-          span e
-          span w
-          span style='letter-spacing: 0;' o
-          span style='letter-spacing: 1px;' r
-          span k
+        span.ms-2.position-relative style='letter-spacing: 1px; top: 1px;'
+          span.text-black.fw-600 style='margin-right: 3px;'
+            | ruby
+          span.text-kit.fw-800
+            | kit
 
       button.navbar-toggler type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation"
         span.navbar-toggler-icon
 
       #navBar.collapse.navbar-collapse
-        ul.navbar-nav.ml-auto
+        ul.navbar-nav.ms-auto
           /li.nav-item
             a.nav-link.mx-2 href="#manifesto"
               | Manifesto
@@ -38,10 +25,13 @@ header.bg-dark
               | Roadmap
           li.nav-item
             a.nav-link.mx-2 href="https://docs.rubykit.org/edge/file.overview.html" target='_blank'
-              | Guides
+              span
+                | Guides
           li.nav-item.mx-2
             a.nav-link href="https://docs.rubykit.org/" target='_blank'
-              | Docs
+              span
+                | Docs
           li.nav-item.mx-2
             a.nav-link href="https://github.com/rubykit/kit" target='_blank'
-              | Source
+              span
+                | Github
